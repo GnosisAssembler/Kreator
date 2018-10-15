@@ -1,0 +1,19 @@
+{
+  "name": "kreator",
+  "version": "1.0.0",
+  "description": "A cli app for creating boilerplated projects in different languages",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankaryp/Kreator.git"
+  },
+  "author": "Panos Karypiadis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pankaryp/Kreator/issues"
+  },
+  "homepage": "https://github.com/pankaryp/Kreator#readme"
+}
