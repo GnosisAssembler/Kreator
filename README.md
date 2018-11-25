@@ -1,6 +1,6 @@
 # Kreator
 
-> A cli app for creating boilerplated projects in different languages.
+> CLI for creating boilerplated projects in different languages.
 
 ![status in_progress](https://img.shields.io/badge/status-in_progress-brightgreen.svg)
 
