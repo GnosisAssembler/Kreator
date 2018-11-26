@@ -25,4 +25,12 @@ if (files.fileExists('package.json')) {
     process.exit();
 }
 
-inquirer.askWhatProject();
+// Run main
+const run = async () => {
+    const projectQuestions = await inquirer.askWhatProject();
+    const languageQuestions = await inquirer.askWhatLanguage();
+    console.log(projectQuestions.title);
+    console.log(languageQuestions.language);
+}
+
+run();
