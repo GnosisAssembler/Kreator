@@ -42,7 +42,7 @@ const run = async () => {
 
         // Create js specific dependencies
         if (jsFrameworkQuestions.jsFramework === 'Node.js') {
-            const nodeJsQuestions = await inquirer.askNodeJs();
+            const nodeJsQuestions = await inquirer.askNodeJs(projectQuestions.title);
             // Create package.json file
             nodejs.createNodePackageJson(
                 projectQuestions.title,
@@ -52,6 +52,7 @@ const run = async () => {
                 nodeJsQuestions.author,
                 nodeJsQuestions.license
                 );
+
             // Create main js file
             nodejs.createMainJs(
                 projectQuestions.title,
