@@ -1,6 +1,6 @@
 const fs = require('fs');
-
 const { exec } = require('child_process');
+const chalk = require('chalk');
 
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
 
         let packageJson = JSON.stringify(data, null, 2);  
         fs.writeFileSync(directory+'/package.json', packageJson); 
-        console.log('Package.json created inside project directory');
+        console.log(chalk.green('*' + ' Package.json created inside project directory'));
 
     },
 
@@ -40,11 +40,12 @@ module.exports = {
         // Create main js file
         fs.appendFile(directory+'/'+main, 'Have a nice hacking with node', function (err) {
             if (err) throw err;
-            console.log('Main js created inside project directory');
+            console.log(chalk.green('*' + ' Main js created inside project directory'));
         });
 
     },
 
+    // -------- UNUSED ----------
     installDependencies: () => {
 
         exec('npm install', (err, stdout, stderr) => {

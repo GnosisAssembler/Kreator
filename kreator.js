@@ -13,6 +13,7 @@ const inquirer = require('./lib/inquirer');
 const project = require('./lib/project');
 
 const nodejs = require('./langs/javascript/nodejs');
+const git = require('./lib/git');
 
 // ASCII title
 clear();
@@ -38,7 +39,6 @@ const run = async () => {
     // Create lang specific dependencies
     if (languageQuestions.language === 'Javascript') {
         const jsFrameworkQuestions = await inquirer.askWhatJsFramework();
-        console.log(jsFrameworkQuestions.jsFramework);
 
         // Create js specific dependencies
         if (jsFrameworkQuestions.jsFramework === 'Node.js') {
@@ -58,17 +58,11 @@ const run = async () => {
                 projectQuestions.title,
                 nodeJsQuestions.main);
 
-            console.log(nodeJsQuestions.name);
-            console.log(nodeJsQuestions.desc);
-            console.log(nodeJsQuestions.main);
-            console.log(nodeJsQuestions.author);
-            console.log(nodeJsQuestions.license);
+            // Create git files
+            git.createGit(projectQuestions.title, nodeJsQuestions.name);
+
         }
     }
-    
-
-    console.log(projectQuestions.title);
-    console.log(languageQuestions.language);
     
 }
 
