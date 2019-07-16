@@ -1,7 +1,7 @@
 {
-  "name": "kreator",
+  "name": "Kreator",
   "version": "1.0.0",
-  "description": "CLI for creating boilerplated projects in different languages",
+  "description": "A node.js cli for creating boilerplated projects in different languages",
   "main": "kreator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
