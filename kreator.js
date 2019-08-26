@@ -13,7 +13,7 @@ const inquirer = require('./lib/inquirer');
 const project = require('./lib/project');
 
 const nodejs = require('./langs/javascript/nodejs');
-const git = require('./lib/git');
+const git = require('./lib/git/git');
 
 // ASCII title
 clear();
@@ -41,7 +41,7 @@ const run = async () => {
         const jsFrameworkQuestions = await inquirer.askWhatJsFramework();
 
         // Create js specific dependencies
-        if (jsFrameworkQuestions.jsFramework === 'Node.js') {
+        if (jsFrameworkQuestions.jsFramework === 'Node.js project') {
             const nodeJsQuestions = await inquirer.askNodeJs(projectQuestions.title);
             // Create package.json file
             nodejs.createNodePackageJson(
@@ -59,7 +59,14 @@ const run = async () => {
                 nodeJsQuestions.main);
 
             // Create git files
-            git.createGit(projectQuestions.title, nodeJsQuestions.name);
+            git.createGit(
+                projectQuestions.title, 
+                nodeJsQuestions.name, 
+                nodeJsQuestions.desc,
+                nodeJsQuestions.license,
+                languageQuestions.language,
+                jsFrameworkQuestions.jsFramework
+            );
 
         }
     }

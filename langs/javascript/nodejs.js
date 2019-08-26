@@ -45,7 +45,7 @@ module.exports = {
 
     },
 
-    // -------- UNUSED ----------
+    //! -------- UNUSED ----------
     installDependencies: () => {
 
         exec('npm install', (err, stdout, stderr) => {
