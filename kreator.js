@@ -58,6 +58,16 @@ const run = async () => {
                 projectQuestions.title,
                 nodeJsQuestions.main);
 
+            // Create api 
+            nodejs.createApi();
+
+            // Create routes 
+            nodejs.createRoutes();
+
+            //! TO BE FIXED
+            // Create route file
+            //nodejs.createRouteFile(projectQuestions.title);
+
             // Create git files
             git.createGit(
                 projectQuestions.title, 
