@@ -59,10 +59,10 @@ const run = async () => {
                 nodeJsQuestions.main);
 
             // Create api 
-            nodejs.createApi();
+            nodejs.createApi(nodeJsQuestions.name);
 
             // Create routes 
-            nodejs.createRoutes();
+            nodejs.createRoutes(nodeJsQuestions.name);
 
             //! TO BE FIXED
             // Create route file

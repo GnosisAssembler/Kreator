@@ -82,16 +82,16 @@ startExpress();
 
     },
 
-    createApi: () => {
-        var api = './test/api';
+    createApi: (name) => {
+        var api = `./${name}/api`;
 
         if (!fs.existsSync(api)){
             fs.mkdirSync(api);
         }
     },
 
-    createRoutes: () => {
-        var routes = './test/api/routes';
+    createRoutes: (name) => {
+        var routes = `./${name}/api/routes`;
 
         if (!fs.existsSync(routes)){
             fs.mkdirSync(routes);
