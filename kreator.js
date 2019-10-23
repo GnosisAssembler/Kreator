@@ -21,6 +21,10 @@ console.log(
     chalk.yellow(
         figlet.textSync('Kreator', { horizontalLayout: 'full' })
     )
+    
+    chalk.orange(
+        figlet.textSync('A cli for creating boilerplated projects', { horizontalLayout: 'full' })
+    )
 );
 
 // Check if the directory is already a node project
